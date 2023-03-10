@@ -95,6 +95,36 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
+                            <label for="prov_id" class="form-label teks-asterisk">Provinsi</label>
+                            <select class="form-select" id="prov_id" name="prov_id" required>
+                                    <option value="">-- Pilih --</option>
+                                    @foreach($prov as $val)
+                                    <option value="{{$val->PROPINSI_ID}}">{{$val->NAMA}}</option>
+                                    @endforeach
+                            <select>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="kabkot_id" class="form-label teks-asterisk">Kabupaten/Kota</label>
+                            <select class="form-select" id="kabkot_id" name="kabkot_id" required>
+                                    <option value="">-- Pilih --</option>
+                            <select>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="kecamatan_id" class="form-label teks-asterisk">Kecamatan</label>
+                            <select class="form-select" id="kecamatan_id" name="kecamatan_id" required>
+                                    <option value="">-- Pilih --</option>
+                                    @foreach($kec as $val)
+                                    <option value="{{$val->KECAMATAN_ID}}">{{$val->NAMA}}</option>
+                                    @endforeach
+                            <select>
+                        </div> 
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
                             <label for="alamat" class="form-label teks-asterisk">Alamat</label>
                             <textarea class="form-control" id="alamat" name="alamat" required></textarea>
                         </div>  

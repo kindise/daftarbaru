@@ -13,11 +13,17 @@ class PendaftaranController extends Controller
         $pendidikan = DB::table('MS_PENDIDIKAN')->get();
         $jk = DB::table('MS_JENIS_KELAMIN')->get();
         $sk = DB::table('MS_STATUS_KAWIN')->get();
+        $prov = DB::table('REF_PROPINSI')->get();
+        $kabkot = DB::table('REF_KABKOTA')->get();
+        $kec = DB::table('REF_KECAMATAN')->get();
         return view('pages.registrasi', compact(
             'agama',
             'pendidikan',
             'jk',
-            'sk'
+            'sk',
+            'prov',
+            'kabkot',
+            'kec'
         ));
     }
 
